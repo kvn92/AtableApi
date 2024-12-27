@@ -43,6 +43,7 @@ class RecetteController extends AbstractController
     {
         $data = $request->toArray();
         $dateRecettes = new \DateTime(); // Par défaut, la date et l'heure actuelles
+
         $recette = new Recette();
     
         $recette->setTitreRecettes($data['titreRecettes'] ?? 'Bolognaised');

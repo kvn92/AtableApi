@@ -124,4 +124,6 @@ class CategorieController extends AbstractController
         return $this->json(['message'=>'effaceer'],JsonResponse::HTTP_OK);
     }
 
+
+
 }
