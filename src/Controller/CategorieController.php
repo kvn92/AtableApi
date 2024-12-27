@@ -87,10 +87,10 @@ class CategorieController extends AbstractController
             $categorie->setStatutCaterogies($data['statutCategories']??false);
     
         // Valider l'entité avec le validateur Symfony
-        $error = $validator->validate($categorie);
+        $errors = $validator->validate($categorie);
     
         // Vérifier s'il y a des erreurs de validation
-        if (count($error) > 0) {
+        if (count($errors) > 0) {
             $errorMessages = [];
             foreach ($errors as $error) {
                 $errorMessages[] = $error->getMessage();

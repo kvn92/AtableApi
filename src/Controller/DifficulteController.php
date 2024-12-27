@@ -63,7 +63,7 @@ class DifficulteController extends AbstractController
     {
         $data = $request->toArray();
 
-        $difficulte->setDifficultes($data['difficultes']??'facile');
+        $difficulte->setDifficultes($data['difficultes']??'');
         $difficulte->setStatutDifficultes($data['statutDifficultes']??false);
 
         $errors = $validator->validate($difficulte);
